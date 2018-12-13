@@ -19,7 +19,6 @@ session_start();
       <option value="40">40</option>
       <option value="41">41</option>
       <option value="42">42</option>
-
     </select>
     <input type="submit" value="Ajouter au panier">
 
