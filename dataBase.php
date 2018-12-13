@@ -25,3 +25,12 @@ function addAccount($pseudo, $email, $pass){
 
   ]);
 }
+function getOneShoe($id) {
+    $connec = new PDO('mysql:dbname=Shop-DB', 'root', '1234');
+    $connec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $request = $connec->prepare('SELECT id, name FROM shoes WHERE id = :id;');
+    $request->execute([
+      ":id" => $id,
+    ]);
+    return $request->fetch();
+  }
